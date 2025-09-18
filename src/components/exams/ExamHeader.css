@@ -1,0 +1,75 @@
+/* Exam Header Styles */
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.exam-title {
+  flex: 1;
+}
+
+.exam-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.exam-progress-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.exam-timer {
+  display: flex;
+  align-items: center;
+}
+
+.timer {
+  background: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  min-width: 80px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.timer--warning {
+  background: #e74c3c;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exam-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .exam-name {
+    font-size: 1.25rem;
+  }
+  
+  .timer {
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+  }
+}

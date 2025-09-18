@@ -1,0 +1,31 @@
+/* Exam Navigation Styles */
+.exam-navigation {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.exam-navigation-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-submit-btn {
+  min-width: 200px;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exam-navigation {
+    padding: 1.5rem 0;
+  }
+  
+  .exam-submit-btn {
+    min-width: 160px;
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
