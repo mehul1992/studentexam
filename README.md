@@ -17,8 +17,8 @@ This app enables students to authenticate, browse available exams, start an exam
 
 ### 1) Clone
 ```bash
-git clone https://github.com/<your-username>/student-exams-frontend.git
-cd student-exams-frontend
+git clone https://github.com/mehul1992/studentexam
+cd studentexam
 ```
 
 ### 2) Install deps
@@ -56,27 +56,6 @@ npm run preview # preview prod build
 | Get Results       | GET    | /api/results/          | list of attempts & summary   |
 | Dashboard         | GET    | /api/dashboard/        | aggregates and charts data   |
 
-> Update base URL/prefix via `.env`.
-
----
-
-## 🧭 Routing & Guards
-
-- Public routes: `/login`
-- Private routes: `/exams`, `/exams/:id/start`, `/results`, `/dashboard`
-- Guard pattern:
-```tsx
-// routes/ProtectedRoute.tsx
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../features/auth/useAuth";
-export default function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : <Navigate to="/login" replace />;
-}
-```
-
-
----
 
 ## 🧪 Testing
 
